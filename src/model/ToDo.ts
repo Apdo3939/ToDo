@@ -2,12 +2,12 @@ export default class ToDo {
 
     #id: number
     #description: string
-    #conclusion: boolean
+    #completed: boolean
 
-    constructor(id: number, description: string, conclusion: boolean) {
+    constructor(id: number, description: string, completed = false) {
         this.#id = id
         this.#description = description
-        this.#conclusion = conclusion
+        this.#completed = completed
     }
 
     static taskCompleted(id: number, description: string) {
@@ -26,12 +26,16 @@ export default class ToDo {
         return this.#description
     }
 
-    get conclusion() {
-        return this.#conclusion
+    get completed() {
+        return this.#completed
+    }
+
+    get active(){
+        return !this.#completed
     }
 
     changeStatus() {
-        return this.#conclusion ? this.setActivetask() : this.setTaskCompleted()
+        return this.#completed ? this.setActivetask() : this.setTaskCompleted()
     }
 
     setTaskCompleted() {
