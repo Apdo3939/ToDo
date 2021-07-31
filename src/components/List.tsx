@@ -1,5 +1,5 @@
 import ToDoList from "../model/ToDoList";
-import ListButtons from "./ListButtons";
+import ListFooter from "./ListFooter";
 import ListItems from "./ListItems";
 
 interface Listprops {
@@ -34,13 +34,10 @@ export default function List(props: Listprops) {
 
                 {rendertasks()}
 
-                <li className={`list-none p-1`}>
-                    <ListButtons
-                        onClick={() => { }}
-                        checked={true}>
-                        <span>Todas</span>
-                    </ListButtons>
-                </li>
+                <ListFooter
+                    tasks={props.tasks}
+                    handleChange={props.handleChange} />
+
             </ul>
         </div>
     )
