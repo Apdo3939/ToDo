@@ -1,4 +1,5 @@
 import ToDoList from "../model/ToDoList";
+import ListButtons from "./ListButtons";
 import ListItems from "./ListItems";
 
 interface Listprops {
@@ -30,7 +31,16 @@ export default function List(props: Listprops) {
     return (
         <div className={`flex w-3/5`}>
             <ul className={`w-full list-none bg-white shadow-lg p-1 rounded-xl`}>
+
                 {rendertasks()}
+
+                <li className={`list-none p-1`}>
+                    <ListButtons
+                        onClick={() => { }}
+                        checked={true}>
+                        <span>Todas</span>
+                    </ListButtons>
+                </li>
             </ul>
         </div>
     )
