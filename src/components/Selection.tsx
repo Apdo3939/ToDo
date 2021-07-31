@@ -9,7 +9,7 @@ export default function Selection(props: SelectionProps) {
 
     return (
         <div className={
-            `h-7 w-7 flex items-center justify-center border rounded-full cursor-pointer m-2
+            `h-7 w-7 flex items-center justify-center border rounded-full cursor-pointer m-2 text-white
             ${gradient} `
         }>
             {props.checked ? <span>x</span> : ''}
