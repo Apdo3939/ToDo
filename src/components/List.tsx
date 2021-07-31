@@ -29,8 +29,9 @@ export default function List(props: Listprops) {
     }
 
     return (
-        <div className={`flex w-3/5`}>
-            <ul className={`w-full list-none bg-white shadow-lg p-1 rounded-xl`}>
+        <div className={`flex w-3/5 items-start relative`}>
+            <ul className={`absolute -top-20
+            w-full list-none shadow-lg p-1 rounded-xl bg-white`}>
 
                 {rendertasks()}
 
