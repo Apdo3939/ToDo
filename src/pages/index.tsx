@@ -1,23 +1,17 @@
-import ListItems from "../components/ListItems"
+import { useState } from "react"
+import List from "../components/List"
+import mock from "../data/mock"
 
 export default function Home() {
 
-  function changeStatus() {
-    console.log('Teste')
-  }
+  const[tasks, setTasks] = useState(mock)
 
   return (
     <div className={`flex flex-col justify-center items-center h-screen 
                     bg-gradient-to-tr from-blue-900 to-red-300 `}>
-      <ListItems
-        changeStatus={changeStatus}
-        completed={false}
-        value={'Lista de itens 01'} />
-      <ListItems
-        changeStatus={changeStatus}
-        completed={true}
-        value={'Lista de itens 02'} />
+      <List
+        handleChange={newTasks => { setTasks(newTasks) }}
+        tasks={tasks} />
     </div>
-
   )
 }
