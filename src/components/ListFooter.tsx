@@ -13,7 +13,7 @@ export default function ListFooter(props: ListFooterProps) {
     function renderQtItems() {
         return (
             <>
-                <span className={`text-blue-300 hidden sm:inline `}>
+                <span className={`text-blue-700 hidden sm:inline `}>
                     {tasks.allTasksQuantity}
                     {tasks.allTasksQuantity === 0
                         ? ' Nenhuma tarefa encontrada'

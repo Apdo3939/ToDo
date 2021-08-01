@@ -13,7 +13,7 @@ export default function ListItems(props: ListItemsprops) {
     return (
         <li
             onClick={props.changeStatus}
-            className={`flex items-center p-4 bg-gray-300 border-b border-gray-600 rounded-xl cursor-pointer text-xl text-black`}>
+            className={`flex items-center p-4 border-b border-gray-600 rounded-xl cursor-pointer text-xl text-black`}>
             <Selection checked={props.completed} />
             <span className={`font-light m-2 ${textCompletedStyle} `}>
                 {props.value}
