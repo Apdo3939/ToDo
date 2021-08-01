@@ -1,5 +1,7 @@
 import { useState } from "react"
 import ToDo from '../model/ToDo'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 interface FormAddTaskProps {
     handleTaskCreated: (task: ToDo) => void
@@ -28,10 +30,12 @@ export default function FormAddTask(props: FormAddTaskProps) {
                 value={description}
                 onChange={e => setDescription(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' ? handleCreateNewTask() : false} />
-                <button 
+            <button
                 onClick={handleCreateNewTask}
                 className={`ml-3 bg-blue-700 px-3 py-1 text-white font-semibold
-                text-xl focus:outline-none rounded-lg cursor-pointer`}>+</button>
+                text-xl focus:outline-none rounded-lg cursor-pointer`}>
+                    <FontAwesomeIcon icon={faPlus} />
+            </button>
         </div>
     )
 }

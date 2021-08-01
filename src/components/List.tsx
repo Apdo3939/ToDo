@@ -32,7 +32,7 @@ export default function List(props: Listprops) {
         <div className={`flex w-3/5 items-start relative`}>
             <ul className={`absolute -top-20 w-full list-none shadow-lg rounded-xl 
              bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400`}>
-
+                 
                 {rendertasks()}
 
                 <ListFooter
